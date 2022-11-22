@@ -1,0 +1,514 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim
+vBB_SYSTEM
+Z1 !s110 1668553863
+!i10b 1
+!s100 oC`@GZNCKWc3=z2D]k6nA3
+IE5h327NYj35:iLFg4?<_h2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1668553250
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v
+L0 5
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1668553863.000000
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1
+Z6 tCvgOpt 0
+n@b@b_@s@y@s@t@e@m
+vCC_BIN2BCD1
+Z7 !s110 1668553862
+!i10b 1
+!s100 QO[[GfEG:_IIZUgJ1o]@b1
+I`i=eD_Uj=06O=bJFCThVg1
+R2
+R0
+Z8 w1668446709
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BIN2BCD1.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BIN2BCD1.v
+Z9 L0 19
+R3
+r1
+!s85 0
+31
+Z10 !s108 1668553862.000000
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BIN2BCD1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BIN2BCD1.v|
+!i113 1
+R5
+Z11 !s92 -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl
+R6
+n@c@c_@b@i@n2@b@c@d1
+vCC_BOTTOMSIDECOMPARATOR
+Z12 !s110 1668553861
+!i10b 1
+!s100 MjU1Yn;iTX94@TFOlJ7]X3
+IaVUk:YNN`if:ga7RN6WID0
+R2
+R0
+R8
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BOTTOMSIDECOMPARATOR.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BOTTOMSIDECOMPARATOR.v
+Z13 L0 21
+R3
+r1
+!s85 0
+31
+Z14 !s108 1668553861.000000
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BOTTOMSIDECOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BOTTOMSIDECOMPARATOR.v|
+!i113 1
+R5
+R11
+R6
+n@c@c_@b@o@t@t@o@m@s@i@d@e@c@o@m@p@a@r@a@t@o@r
+vCC_COLLITIONCOMPARATOR
+R1
+!i10b 1
+!s100 TQAo>^ZN1V01nFO]zegSR0
+IaUMAlO9PI=H7O2D[3<A9Q2
+R2
+R0
+R8
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_COLLITIONCOMPARATOR.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_COLLITIONCOMPARATOR.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_COLLITIONCOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_COLLITIONCOMPARATOR.v|
+!i113 1
+R5
+R11
+R6
+n@c@c_@c@o@l@l@i@t@i@o@n@c@o@m@p@a@r@a@t@o@r
+vCC_SCREENCOMPARATOR
+R1
+!i10b 1
+!s100 CV6PeLMG:OH9^ZUS@2H?X0
+IIKAz0;h6Ob9iY@zOCTo9c1
+R2
+R0
+w1668552948
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SCREENCOMPARATOR.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SCREENCOMPARATOR.v
+R13
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SCREENCOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SCREENCOMPARATOR.v|
+!i113 1
+R5
+R11
+R6
+n@c@c_@s@c@r@e@e@n@c@o@m@p@a@r@a@t@o@r
+vCC_SEVENSEG1
+R7
+!i10b 1
+!s100 U;OI0BK_N[TU?J^bM9E360
+I=U9dHf8m>2YfaO=2hT[nl1
+R2
+R0
+R8
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SEVENSEG1.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SEVENSEG1.v
+L0 24
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SEVENSEG1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SEVENSEG1.v|
+!i113 1
+R5
+R11
+R6
+n@c@c_@s@e@v@e@n@s@e@g1
+vCC_SPEEDCOMPARATOR
+R1
+!i10b 1
+!s100 mgo8T_oQa5]YOM9mIMnf03
+Ij[gSN0?8Ol4O2S6SJcbQ`0
+R2
+R0
+w1668553163
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SPEEDCOMPARATOR.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SPEEDCOMPARATOR.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SPEEDCOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SPEEDCOMPARATOR.v|
+!i113 1
+R5
+R11
+R6
+n@c@c_@s@p@e@e@d@c@o@m@p@a@r@a@t@o@r
+vCC_TIMECOMPARATOR
+Z15 !s110 1668553864
+!i10b 1
+!s100 YbLDoRg^?hi;RkFiRDoNC1
+I_a4SBM6;gWL9M88KzXj[_1
+R2
+R0
+w1668553189
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_TIMECOMPARATOR.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_TIMECOMPARATOR.v
+L0 5
+R3
+r1
+!s85 0
+31
+Z16 !s108 1668553864.000000
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_TIMECOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_TIMECOMPARATOR.v|
+!i113 1
+R5
+R11
+R6
+n@c@c_@t@i@m@e@c@o@m@p@a@r@a@t@o@r
+vCC_WINCOMPARATOR
+R15
+!i10b 1
+!s100 Dfba^JLQ=XN>NNIOo;0N12
+IO??C[5@13:R4S5NRgbfnk0
+R2
+R0
+Z17 w1668446710
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_WINCOMPARATOR.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_WINCOMPARATOR.v
+L0 5
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_WINCOMPARATOR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_WINCOMPARATOR.v|
+!i113 1
+R5
+R11
+R6
+n@c@c_@w@i@n@c@o@m@p@a@r@a@t@o@r
+vmatrix_ctrl
+R7
+!i10b 1
+!s100 e8fJ::8FZhBf=Yo62HC<D0
+IO>bD0FV?Mn;BB80CVd94f3
+R2
+R0
+R17
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/max7219_ctrl.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/max7219_ctrl.v
+L0 18
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/max7219_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/max7219_ctrl.v|
+!i113 1
+R5
+R11
+R6
+vSC_DEBOUNCE1
+R7
+!i10b 1
+!s100 R1A>6;z02mNBGFV[E4kge0
+IYhSSZeRmFiE1<HR;Jjel?2
+R2
+R0
+R17
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_DEBOUNCE1.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_DEBOUNCE1.v
+L0 44
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_DEBOUNCE1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_DEBOUNCE1.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_@d@e@b@o@u@n@c@e1
+vSC_LEVELCOUNTER
+R1
+!i10b 1
+!s100 JF>bgPR4YejjGBIhIbmFc3
+IFFNeUzNDP9N]6>aDYYSCb1
+R2
+R0
+w1668451400
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_@l@e@v@e@l@c@o@u@n@t@e@r
+vSC_positionYCOUNTER
+R15
+!i10b 1
+!s100 oM?F>hi2fEgFFP01@5eWc3
+Iif^B24Ve]N>@TzUIP7dPX0
+R2
+R0
+w1668550790
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_positionYCOUNTER.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_positionYCOUNTER.v
+L0 5
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_positionYCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_positionYCOUNTER.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_position@y@c@o@u@n@t@e@r
+vSC_RegBACKGTYPE
+R12
+!i10b 1
+!s100 YzoL_<z`OCz4Q?X9KmJkg0
+ICgD_]QVacfX]zXGWinf?02
+R2
+R0
+R17
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v
+R13
+R3
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_@reg@b@a@c@k@g@t@y@p@e
+vSC_RegPOINTTYPE
+R12
+!i10b 1
+!s100 iXgM8P9A8[e:3_d:HIgK>0
+IePf:l:z?`MG6g;0Sg7OhX3
+R2
+R0
+R17
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegPOINTTYPE.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegPOINTTYPE.v
+L0 5
+R3
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegPOINTTYPE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegPOINTTYPE.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_@reg@p@o@i@n@t@t@y@p@e
+vSC_STATEMACHINEGAME
+R15
+!i10b 1
+!s100 BONYKzL6<G>kDQ?X8QF7k3
+I0`66Vl4:Zf0VB`hCD263a2
+R2
+R0
+w1668543292
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v
+R13
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e@g@a@m@e
+vSC_STATEMACHINEPOINT
+R12
+!i10b 1
+!s100 b2e2z8R2`^8EkXHkjzOoX1
+I3IYi^2<6^dl:@0[lihlJc3
+R2
+R0
+R17
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v
+R13
+R3
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_@s@t@a@t@e@m@a@c@h@i@n@e@p@o@i@n@t
+vSC_TIMECOUNTER
+R15
+!i10b 1
+!s100 DTPa7UBIFd[G?@Q>C4F032
+ITI;JMTQkj4Uh^Ge`g44W20
+R2
+R0
+w1668553202
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_TIMECOUNTER.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_TIMECOUNTER.v
+L0 5
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_TIMECOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_TIMECOUNTER.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_@t@i@m@e@c@o@u@n@t@e@r
+vSC_upCOUNTER
+R12
+!i10b 1
+!s100 PT49PD5be3bIA@;=]eGhk2
+IU>9B5aa@S<[[?YBRjj79O1
+R2
+R0
+R17
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upCOUNTER.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upCOUNTER.v
+R13
+R3
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upCOUNTER.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_up@c@o@u@n@t@e@r
+vSC_upSPEEDCOUNTER
+R15
+!i10b 1
+!s100 g]^Q`UFXWdhlnkFobXNUV0
+IYTNd=5b=oe4kk]jM:j`gn1
+R2
+R0
+w1668552529
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upSPEEDCOUNTER.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upSPEEDCOUNTER.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upSPEEDCOUNTER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upSPEEDCOUNTER.v|
+!i113 1
+R5
+R11
+R6
+n@s@c_up@s@p@e@e@d@c@o@u@n@t@e@r
+vshift_reg_start_done
+R7
+!i10b 1
+!s100 P[k=OFn:ZJUAdXXFS>kmX1
+IBlH7AXGOEW0J3lJboPXHI1
+R2
+R0
+w1668446711
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/shift_reg_start_done.v
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/shift_reg_start_done.v
+L0 34
+R3
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/shift_reg_start_done.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/shift_reg_start_done.v|
+!i113 1
+R5
+R11
+R6
+vTB_SYSTEM
+R15
+!i10b 1
+!s100 aQ;]SJLkW=d9mjAL2HR<:0
+IlLoO@ci4Xc@K?]l5OQ1XO0
+R2
+R0
+w1668548617
+8C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim/TB_SYSTEM.vt
+FC:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim/TB_SYSTEM.vt
+R9
+R3
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim/TB_SYSTEM.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim|C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim/TB_SYSTEM.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim
+R6
+n@t@b_@s@y@s@t@e@m

@@ -1,0 +1,455 @@
+///*######################################################################
+//#	G0B1T: HDL EXAMPLES. 2018.
+//######################################################################
+//# Copyright (C) 2018. F.E.Segura-Quijano (FES) fsegura@uniandes.edu.co
+//# 
+//# This program is free software: you can redistribute it and/or modify
+//# it under the terms of the GNU General Public License as published by
+//# the Free Software Foundation, version 3 of the License.
+//#
+//# This program is distributed in the hope that it will be useful,
+//# but WITHOUT ANY WARRANTY; without even the implied warranty of
+//# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//# GNU General Public License for more details.
+//#
+//# You should have received a copy of the GNU General Public License
+//# along with this program.  If not, see <http://www.gnu.org/licenses/>
+//####################################################################*/
+//=======================================================
+//  MODULE Definition
+//=======================================================
+module SC_STATEMACHINEGAME (
+////////////////// OUTPUTS //////////
+		//TiempoDeImagenesEnpantalla
+		SC_STATEMACHINEGAME_timeCounter_OutLow,
+		//EstadoActual y Nivel
+		SC_STATEMACHINEGAME_state_data_OutBus,
+		SC_STATEMACHINEGAME_levelcounter_OutLow,
+		//Hacer movimiento de los carros - There are two shifters one for left motion and other one for right motion
+		SC_STATEMACHINEGAME_load_OutLow,
+		SC_STATEMACHINEGAME_ShiftSelection1_OutBus,
+		SC_STATEMACHINEGAME_ShiftSelection2_OutBus,
+		//TiempoVelocidadCarros
+		SC_STATEMACHINEGAME_upcount_InLow,
+/////////////////// INPUTS //////////
+		SC_STATEMACHINEGAME_CLOCK_50,
+		SC_STATEMACHINEGAME_RESET_InHigh,
+		//tiempo-figuras
+		SC_STATEMACHINEGAME_timeComparator_InLow,
+		//start para que quede fixed in the frogg-face
+		SC_STATEMACHINEGAME_startButton_InLow,
+		//Colisiones y verificar si lleno casas
+		SC_STATEMACHINEGAME_win_InLow,
+		SC_STATEMACHINEGAME_lose_InLow,
+		//Niveles para establecer las figuras que debe cargar
+		SC_STATEMACHINEGAME_level_data_InBus,
+		//Shifter automático - Cars Motion
+		SC_STATEMACHINEGAME_speedComparator_InLow
+);	
+//=======================================================
+//  PARAMETER declarations
+//=======================================================
+//Parameters
+parameter DATAWIDTH_STATE_BUS = 3;
+parameter DATAWIDTH_LEVEL_BUS = 3;
+parameter DATAWIDTH_SHIFT = 2;
+// states declaration
+localparam STATE_RESET_0									= 0;
+localparam STATE_START_0									= 1;
+localparam STATE_CHECK_0									= 2;
+localparam STATE_CHECK_1									= 3;
+localparam STATE_INIT_0										= 4;
+localparam STATE_INIT_1										= 5;
+localparam STATE_WIN_0										= 6;
+localparam STATE_WIN_1										= 7;
+localparam STATE_LOSE_0										= 8;
+localparam STATE_LOSE_1										= 9;
+localparam STATE_PASS_0										= 10;
+localparam STATE_PASS_1										= 11;
+localparam STATE_NUMBER_0     	                  = 12;
+localparam STATE_NUMBER_1                          = 13;
+localparam STATE_PLAYING_0									= 14;
+localparam STATE_PLAYING_1									= 15;
+localparam STATE_SHIFTER_0									= 16;
+localparam STATE_SHIFTER_1									= 17;
+localparam STATE_DOUBLESHIFTER_0							= 18;
+localparam STATE_DOUBLESHIFTER_1							= 19;
+
+
+//=======================================================
+//  PORT declarations
+//=======================================================
+output reg		SC_STATEMACHINEGAME_timeCounter_OutLow;
+output reg		[DATAWIDTH_STATE_BUS-1:0]SC_STATEMACHINEGAME_state_data_OutBus;
+output reg		SC_STATEMACHINEGAME_levelcounter_OutLow;
+output reg		SC_STATEMACHINEGAME_load_OutLow;
+output reg		[DATAWIDTH_SHIFT-1:0]SC_STATEMACHINEGAME_ShiftSelection1_OutBus;
+output reg		[DATAWIDTH_SHIFT-1:0]SC_STATEMACHINEGAME_ShiftSelection2_OutBus;
+output reg 		SC_STATEMACHINEGAME_upcount_InLow;
+input				SC_STATEMACHINEGAME_startButton_InLow;
+input				SC_STATEMACHINEGAME_CLOCK_50;
+input 			SC_STATEMACHINEGAME_timeComparator_InLow;
+input 			SC_STATEMACHINEGAME_RESET_InHigh;
+input				SC_STATEMACHINEGAME_win_InLow;
+input				SC_STATEMACHINEGAME_lose_InLow;
+input 			[DATAWIDTH_LEVEL_BUS-1:0] SC_STATEMACHINEGAME_level_data_InBus;
+input				SC_STATEMACHINEGAME_speedComparator_InLow;
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+reg [3:0] STATE_Register;
+reg [3:0] STATE_Signal;
+//=======================================================
+//  Structural coding
+//=======================================================
+//INPUT LOGIC: COMBINATIONAL
+// NEXT STATE LOGIC : COMBINATIONAL
+always @(*)
+begin
+	case (STATE_Register)
+	
+		STATE_RESET_0: STATE_Signal = STATE_START_0;
+		STATE_START_0: STATE_Signal = STATE_CHECK_0;							
+		STATE_CHECK_0: STATE_Signal = STATE_CHECK_1;
+		STATE_CHECK_1: if (SC_STATEMACHINEGAME_startButton_InLow == 1'b0) STATE_Signal = STATE_INIT_0;
+							else STATE_Signal = STATE_CHECK_1;
+		STATE_INIT_0:	STATE_Signal = STATE_NUMBER_0;
+		STATE_NUMBER_0: STATE_Signal = STATE_NUMBER_1;
+		STATE_NUMBER_1: if(SC_STATEMACHINEGAME_timeCounter_OutLow == 1'b0) STATE_Signal = STATE_PLAYING_0;
+							 else STATE_Signal = STATE_NUMBER_1;
+		STATE_PLAYING_0: STATE_Signal = STATE_PLAYING_1;
+		STATE_PLAYING_1: if(SC_STATEMACHINEGAME_win_InLow == 1'b0 && SC_STATEMACHINEGAME_level_data_InBus < 3'b100) STATE_Signal = STATE_PASS_0;
+							  else if(SC_STATEMACHINEGAME_win_InLow == 1'b0 && SC_STATEMACHINEGAME_level_data_InBus == 3'b100) STATE_Signal = STATE_WIN_0;
+							  else if(SC_STATEMACHINEGAME_lose_InLow == 1'b0) STATE_Signal = STATE_LOSE_0;
+							  else if(SC_STATEMACHINEGAME_speedComparator_InLow == 1'b0 && SC_STATEMACHINEGAME_level_data_InBus == 3'b001) STATE_Signal = STATE_SHIFTER_0;
+							  else if(SC_STATEMACHINEGAME_speedComparator_InLow == 1'b0 && SC_STATEMACHINEGAME_level_data_InBus == 3'b010) STATE_Signal = STATE_SHIFTER_0;
+							  else if(SC_STATEMACHINEGAME_speedComparator_InLow == 1'b0 && SC_STATEMACHINEGAME_level_data_InBus == 3'b011) STATE_Signal = STATE_DOUBLESHIFTER_0;
+							  else if(SC_STATEMACHINEGAME_speedComparator_InLow == 1'b0 && SC_STATEMACHINEGAME_level_data_InBus == 3'b100) STATE_Signal = STATE_DOUBLESHIFTER_0;
+							  else STATE_Signal = STATE_PLAYING_1;
+		STATE_WIN_0: STATE_Signal = STATE_WIN_1;
+		STATE_WIN_1: STATE_Signal = STATE_WIN_1;
+		STATE_LOSE_0: STATE_Signal = STATE_LOSE_1;
+		STATE_LOSE_1: STATE_Signal = STATE_LOSE_1;
+		STATE_PASS_0: STATE_Signal = STATE_PASS_1;
+		STATE_PASS_1: if (SC_STATEMACHINEGAME_timeCounter_OutLow == 1'b0) STATE_Signal = STATE_INIT_0;
+						  else STATE_Signal = STATE_PASS_1;
+		STATE_SHIFTER_0: STATE_Signal = STATE_SHIFTER_1;
+		STATE_SHIFTER_1: STATE_Signal = STATE_PLAYING_1;
+		STATE_DOUBLESHIFTER_0: STATE_Signal = STATE_DOUBLESHIFTER_1;
+		STATE_DOUBLESHIFTER_1: STATE_Signal = STATE_PLAYING_1; 
+							
+		default : 		STATE_Signal = STATE_CHECK_0;
+	endcase
+end
+// STATE REGISTER : SEQUENTIAL
+always @ ( posedge SC_STATEMACHINEGAME_CLOCK_50 , posedge SC_STATEMACHINEGAME_RESET_InHigh)
+begin
+	if (SC_STATEMACHINEGAME_RESET_InHigh == 1'b1)
+		STATE_Register <= STATE_RESET_0;
+	else
+		STATE_Register <= STATE_Signal;
+end
+//=======================================================
+//  Outputs
+//=======================================================
+// OUTPUT LOGIC : COMBINATIONAL
+always @ (*)
+begin
+	case (STATE_Register)
+//=========================================================
+// STATE_RESET
+//=========================================================
+	STATE_RESET_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b000;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_START
+//=========================================================
+	STATE_START_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b000;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_CHECK_0
+//=========================================================
+//Se carga la cara de la Rana -----------------------------
+	STATE_CHECK_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b001;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_CHECK_1
+//=========================================================
+//Se queda en bucle en la cara de rana hasta dar start ----
+	STATE_CHECK_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b001;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_INIT_0
+//=========================================================
+//------- Estado Inicio -----------------------------------
+//------- Reincia el contador -----------------------------
+	STATE_INIT_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b000;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end	
+//=========================================================
+// STATE_INIT_1
+//=========================================================
+	STATE_INIT_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b000;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_WIN_0
+//=========================================================
+//---- Se carga la imagen del trofeo-----------------------
+	STATE_WIN_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b010;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_WIN_1
+//=========================================================
+//----- Se queda en el bucle del trofeo hasta reset -------
+	STATE_WIN_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b010;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_LOSE_0
+//=========================================================
+//------ Se carga la imagen de perdida --------------------
+	STATE_LOSE_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b011;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_LOSE_1
+//=========================================================
+//-------- Se queda en bucle de lose hasta reset ----------
+	STATE_LOSE_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b011;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// STATE_PASS_0
+//=========================================================
+//--------- Carga la imagen de check ----------------------
+	STATE_PASS_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b101;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//==============================================================
+// STATE_PASS_1
+//==============================================================
+//---- Bucle de check hasta que el time counter muestre 0 -------
+//---- Se inicia el contador -------------------------------------
+	STATE_PASS_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b101;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//==============================================================
+// STATE_NUMBER_0
+//==============================================================
+//---- Carga el número -----------------------------------------
+	STATE_NUMBER_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b110;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//==============================================================
+// STATE_NUMBER_1
+//==============================================================
+//---- Bucle del número hasta que el time counter muestre 0 ----
+//---- Se enciende el contador ---------------------------------
+	STATE_NUMBER_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b110;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//==============================================================
+// STATE_PLAYING_0
+//==============================================================
+//---- Se cargan los carros del nivel --------------------------
+	STATE_PLAYING_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b100;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b0;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//==============================================================
+// STATE_PLAYING_1
+//==============================================================
+//---- Bucle de juego - Sino hay lose o win regresa a playing --
+//---- Inicia el contador automatico del shifter ---------------
+	STATE_PLAYING_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b100;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b0;
+		end
+//==============================================================
+// STATE_SHIFTER_0
+//==============================================================
+//---- El  contado del shifter muestra 0 - movimiento automatico --
+	STATE_SHIFTER_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b100;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b10;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b10;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b0;
+		end
+//==============================================================
+// STATE_SHIFTER_1
+//==============================================================
+//---- El  contado del shifter muestra 0 - movimiento automatico --
+	STATE_SHIFTER_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b100;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//==============================================================
+// STATE_DOUBLESHIFTER_0
+//==============================================================
+//---- El  contado del shifter muestra 0 - movimiento automatico --
+	STATE_DOUBLESHIFTER_0 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b100;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b10;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b01;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b0;
+		end
+//==============================================================
+// STATE_DOUBLESHIFTER_1
+//==============================================================
+//---- El  contado del shifter muestra 0 - movimiento automatico --
+	STATE_DOUBLESHIFTER_1 :	
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b100;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+//=========================================================
+// DEFAULT
+//=========================================================
+	default :
+		begin
+			SC_STATEMACHINEGAME_timeCounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_state_data_OutBus = 3'b000;
+			SC_STATEMACHINEGAME_levelcounter_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_load_OutLow = 1'b1;
+			SC_STATEMACHINEGAME_ShiftSelection1_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_ShiftSelection2_OutBus = 2'b00;
+			SC_STATEMACHINEGAME_upcount_InLow = 1'b1;
+		end
+	endcase
+end
+endmodule

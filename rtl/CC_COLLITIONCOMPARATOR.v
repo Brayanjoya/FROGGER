@@ -1,0 +1,86 @@
+
+//=======================================================
+//  MODULE Definition
+//=======================================================
+module CC_COLLITIONCOMPARATOR #(parameter DATAWIDTH=8) (
+
+	///////// OUTPUTS //////////
+	CC_COLLITIONCOMPARATOR_Out,
+	
+	//////// INPUTS ///////////
+	
+	CC_COLLITIONCOMPARATOR_POINT_data0_InBus,
+	CC_COLLITIONCOMPARATOR_POINT_data1_InBus,
+	CC_COLLITIONCOMPARATOR_POINT_data2_InBus,
+	CC_COLLITIONCOMPARATOR_POINT_data3_InBus,
+	CC_COLLITIONCOMPARATOR_POINT_data4_InBus,
+	CC_COLLITIONCOMPARATOR_POINT_data5_InBus,
+	CC_COLLITIONCOMPARATOR_POINT_data6_InBus,
+	CC_COLLITIONCOMPARATOR_POINT_data7_InBus,
+	
+	CC_COLLITIONCOMPARATOR_BACKG_data0_InBus,
+	CC_COLLITIONCOMPARATOR_BACKG_data1_InBus,
+	CC_COLLITIONCOMPARATOR_BACKG_data2_InBus,
+	CC_COLLITIONCOMPARATOR_BACKG_data3_InBus,
+	CC_COLLITIONCOMPARATOR_BACKG_data4_InBus,
+	CC_COLLITIONCOMPARATOR_BACKG_data5_InBus,
+	CC_COLLITIONCOMPARATOR_BACKG_data6_InBus,
+	CC_COLLITIONCOMPARATOR_BACKG_data7_InBus
+
+);
+
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+wire	[DATAWIDTH-1:0] regCOLLITION_data0_wire;
+wire	[DATAWIDTH-1:0] regCOLLITION_data1_wire;
+wire	[DATAWIDTH-1:0] regCOLLITION_data2_wire;
+wire	[DATAWIDTH-1:0] regCOLLITION_data3_wire;
+wire	[DATAWIDTH-1:0] regCOLLITION_data4_wire;
+wire	[DATAWIDTH-1:0] regCOLLITION_data5_wire;
+wire	[DATAWIDTH-1:0] regCOLLITION_data6_wire;
+wire	[DATAWIDTH-1:0] regCOLLITION_data7_wire;
+//=======================================================
+//  PORT declarations
+//=======================================================
+output	CC_COLLITIONCOMPARATOR_Out;
+
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data0_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data1_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data2_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data3_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data4_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data5_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data6_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_POINT_data7_InBus;
+	
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data0_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data1_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data2_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data3_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data4_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data5_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data6_InBus;
+input		[DATAWIDTH-1:0] CC_COLLITIONCOMPARATOR_BACKG_data7_InBus;
+
+
+//=======================================================
+//  Outputs
+//=======================================================
+//OUTPUT LOGIC: COMBINATIONAL
+
+
+assign regCOLLITION_data0_wire = CC_COLLITIONCOMPARATOR_POINT_data0_InBus & CC_COLLITIONCOMPARATOR_BACKG_data0_InBus;
+assign regCOLLITION_data1_wire = CC_COLLITIONCOMPARATOR_POINT_data1_InBus & CC_COLLITIONCOMPARATOR_BACKG_data1_InBus;
+assign regCOLLITION_data2_wire = CC_COLLITIONCOMPARATOR_POINT_data2_InBus & CC_COLLITIONCOMPARATOR_BACKG_data2_InBus;
+assign regCOLLITION_data3_wire = CC_COLLITIONCOMPARATOR_POINT_data3_InBus & CC_COLLITIONCOMPARATOR_BACKG_data3_InBus;
+assign regCOLLITION_data4_wire = CC_COLLITIONCOMPARATOR_POINT_data4_InBus & CC_COLLITIONCOMPARATOR_BACKG_data4_InBus;
+assign regCOLLITION_data5_wire = CC_COLLITIONCOMPARATOR_POINT_data5_InBus & CC_COLLITIONCOMPARATOR_BACKG_data5_InBus;
+assign regCOLLITION_data6_wire = CC_COLLITIONCOMPARATOR_POINT_data6_InBus & CC_COLLITIONCOMPARATOR_BACKG_data6_InBus;
+assign regCOLLITION_data7_wire = CC_COLLITIONCOMPARATOR_POINT_data7_InBus & CC_COLLITIONCOMPARATOR_BACKG_data7_InBus;
+
+assign CC_COLLITIONCOMPARATOR_Out = regCOLLITION_data0_wire || regCOLLITION_data1_wire || regCOLLITION_data2_wire || regCOLLITION_data3_wire || regCOLLITION_data4_wire || regCOLLITION_data5_wire || regCOLLITION_data6_wire || regCOLLITION_data7_wire;
+
+endmodule
+
+

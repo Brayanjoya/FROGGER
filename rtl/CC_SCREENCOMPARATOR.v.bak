@@ -1,0 +1,177 @@
+*######################################################################
+//#	G0B1T: HDL EXAMPLES. 2018.
+//######################################################################
+//# Copyright (C) 2018. F.E.Segura-Quijano (FES) fsegura@uniandes.edu.co
+//# 
+//# This program is free software: you can redistribute it and/or modify
+//# it under the terms of the GNU General Public License as published by
+//# the Free Software Foundation, version 3 of the License.
+//#
+//# This program is distributed in the hope that it will be useful,
+//# but WITHOUT ANY WARRANTY; without even the implied warranty of
+//# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//# GNU General Public License for more details.
+//#
+//# You should have received a copy of the GNU General Public License
+//# along with this program.  If not, see <http://www.gnu.org/licenses/>
+//####################################################################*/
+//=======================================================
+//  MODULE Definition
+//=======================================================
+module CC_SCREENCOMPARATOR (
+//////////// OUTPUTS //////////
+	CC_SCREENCOMPARATOR_regGAME_data7_OutBus,
+	CC_SCREENCOMPARATOR_regGAME_data6_OutBus,
+	CC_SCREENCOMPARATOR_regGAME_data5_OutBus,
+	CC_SCREENCOMPARATOR_regGAME_data4_OutBus,
+	CC_SCREENCOMPARATOR_regGAME_data3_OutBus,
+	CC_SCREENCOMPARATOR_regGAME_data2_OutBus,
+	CC_SCREENCOMPARATOR_regGAME_data1_OutBus,
+	CC_SCREENCOMPARATOR_regGAME_data0_OutBus
+//////////// INPUTS //////////
+	CC_SCREENCOMPARATOR_state_data_InBus,
+	CC_SCREENCOMPARATOR_level_data_InBus
+);
+//=======================================================
+//  PARAMETER declarations
+//=======================================================
+parameter DATAWIDTH_STATE = 3;
+parameter DATAWIDTH_LEVEL = 3;
+parameter NUMBER_DATAWIDTH = 8;
+//=======================================================
+//  PORT declarations
+//=======================================================
+output reg 	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data7_OutBus;
+output reg	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data6_OutBus;
+output reg	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data5_OutBus;
+output reg	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data4_OutBus;
+output reg	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data3_OutBus;
+output reg	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data2_OutBus;
+output reg	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data1_OutBus;
+output reg	[NUMBER_DATAWIDTH-1:0] CC_SCREENCOMPARATOR_regGAME_data0_OutBus;
+input 	[DATAWIDTH_STATE-1:0] CC_SCREENCOMPARATOR_state_data_InBus;
+input 	[DATAWIDTH_LEVEL-1:0] CC_SCREENCOMPARATOR_level_data_InBus;
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+
+//=======================================================
+//  Structural coding
+//=======================================================
+//STRUCTURAL
+always @(*)
+begin
+	if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b000)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00100100;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b01111110;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b11111111;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b11011011;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b01111110;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b01000010;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b10111101;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b10000001;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b001)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b10000001;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b01000010;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b01100110;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b10011001;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b10011001;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b11000011;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b011)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00111100;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b11111111;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b10111101;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b01111110;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b00111100;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b00011000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b00011000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00111100;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b101)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000001;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000011;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000110;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b10001100;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b11011000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b01110000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00100000;
+	//Números
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b110 && CC_SCREENCOMPARATOR_level_data_InBus==3b'001)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000001;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000011;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000110;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b10001100;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b11011000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b01110000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00100000;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b110 && CC_SCREENCOMPARATOR_level_data_InBus==3b'010)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000001;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000011;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000110;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b10001100;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b11011000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b01110000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00100000;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b110 && CC_SCREENCOMPARATOR_level_data_InBus==3b'011)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000001;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000011;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000110;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b10001100;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b11011000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b01110000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00100000;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b110 && CC_SCREENCOMPARATOR_level_data_InBus==3b'100)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000001;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000011;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000110;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b10001100;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b11011000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b01110000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00100000;
+	//Niveles
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b100 && CC_SCREENCOMPARATOR_level_data_InBus==3b'001)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00000000;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b100 && CC_SCREENCOMPARATOR_level_data_InBus==3b'010)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00000000;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b100 && CC_SCREENCOMPARATOR_level_data_InBus==3b'011)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00000000;
+	else if (CC_SCREENCOMPARATOR_state_data_InBus == 3'b100 && CC_SCREENCOMPARATOR_level_data_InBus==3b'100)
+		CC_SCREENCOMPARATOR_regGAME_data7_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data6_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data5_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data4_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data3_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data2_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data1_OutBus = 8'b00000000;
+		CC_SCREENCOMPARATOR_regGAME_data0_OutBus = 8'b00000000;
+end
+
+endmodule
+

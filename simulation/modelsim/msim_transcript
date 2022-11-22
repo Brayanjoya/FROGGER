@@ -1,0 +1,282 @@
+# Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
+# do BB_SYSTEM_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/19.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:01 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v 
+# -- Compiling module SC_RegBACKGTYPE
+# 
+# Top level modules:
+# 	SC_RegBACKGTYPE
+# End time: 18:11:01 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:01 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v 
+# -- Compiling module SC_STATEMACHINEPOINT
+# 
+# Top level modules:
+# 	SC_STATEMACHINEPOINT
+# End time: 18:11:01 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegPOINTTYPE.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:01 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegPOINTTYPE.v 
+# -- Compiling module SC_RegPOINTTYPE
+# 
+# Top level modules:
+# 	SC_RegPOINTTYPE
+# End time: 18:11:01 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BOTTOMSIDECOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:01 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BOTTOMSIDECOMPARATOR.v 
+# -- Compiling module CC_BOTTOMSIDECOMPARATOR
+# 
+# Top level modules:
+# 	CC_BOTTOMSIDECOMPARATOR
+# End time: 18:11:01 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:01 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upCOUNTER.v 
+# -- Compiling module SC_upCOUNTER
+# 
+# Top level modules:
+# 	SC_upCOUNTER
+# End time: 18:11:01 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SEVENSEG1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:02 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SEVENSEG1.v 
+# -- Compiling module CC_SEVENSEG1
+# 
+# Top level modules:
+# 	CC_SEVENSEG1
+# End time: 18:11:02 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BIN2BCD1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:02 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_BIN2BCD1.v 
+# -- Compiling module CC_BIN2BCD1
+# 
+# Top level modules:
+# 	CC_BIN2BCD1
+# End time: 18:11:02 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/shift_reg_start_done.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:02 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/shift_reg_start_done.v 
+# -- Compiling module shift_reg_start_done
+# 
+# Top level modules:
+# 	shift_reg_start_done
+# End time: 18:11:02 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/max7219_ctrl.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:02 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/max7219_ctrl.v 
+# -- Compiling module matrix_ctrl
+# 
+# Top level modules:
+# 	matrix_ctrl
+# End time: 18:11:02 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_DEBOUNCE1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:02 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_DEBOUNCE1.v 
+# -- Compiling module SC_DEBOUNCE1
+# 
+# Top level modules:
+# 	SC_DEBOUNCE1
+# End time: 18:11:02 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1 {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:03 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v 
+# -- Compiling module BB_SYSTEM
+# 
+# Top level modules:
+# 	BB_SYSTEM
+# End time: 18:11:03 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:03 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v 
+# -- Compiling module SC_LEVELCOUNTER
+# 
+# Top level modules:
+# 	SC_LEVELCOUNTER
+# End time: 18:11:03 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_COLLITIONCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:03 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_COLLITIONCOMPARATOR.v 
+# -- Compiling module CC_COLLITIONCOMPARATOR
+# 
+# Top level modules:
+# 	CC_COLLITIONCOMPARATOR
+# End time: 18:11:03 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SCREENCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:03 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SCREENCOMPARATOR.v 
+# -- Compiling module CC_SCREENCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SCREENCOMPARATOR
+# End time: 18:11:03 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SPEEDCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:03 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_SPEEDCOMPARATOR.v 
+# -- Compiling module CC_SPEEDCOMPARATOR
+# 
+# Top level modules:
+# 	CC_SPEEDCOMPARATOR
+# End time: 18:11:03 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upSPEEDCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:03 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_upSPEEDCOUNTER.v 
+# -- Compiling module SC_upSPEEDCOUNTER
+# 
+# Top level modules:
+# 	SC_upSPEEDCOUNTER
+# End time: 18:11:04 on Nov 15,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_TIMECOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:04 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_TIMECOUNTER.v 
+# -- Compiling module SC_TIMECOUNTER
+# 
+# Top level modules:
+# 	SC_TIMECOUNTER
+# End time: 18:11:04 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_TIMECOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:04 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_TIMECOMPARATOR.v 
+# -- Compiling module CC_TIMECOMPARATOR
+# ** Warning: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_TIMECOMPARATOR.v(34): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	CC_TIMECOMPARATOR
+# End time: 18:11:04 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:04 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v 
+# -- Compiling module SC_STATEMACHINEGAME
+# 
+# Top level modules:
+# 	SC_STATEMACHINEGAME
+# End time: 18:11:04 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_WINCOMPARATOR.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:04 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/CC_WINCOMPARATOR.v 
+# -- Compiling module CC_WINCOMPARATOR
+# 
+# Top level modules:
+# 	CC_WINCOMPARATOR
+# End time: 18:11:04 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_positionYCOUNTER.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:04 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_positionYCOUNTER.v 
+# -- Compiling module SC_positionYCOUNTER
+# 
+# Top level modules:
+# 	SC_positionYCOUNTER
+# End time: 18:11:04 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim {C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim/TB_SYSTEM.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:11:04 on Nov 15,2022
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim" C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim/TB_SYSTEM.vt 
+# -- Compiling module TB_SYSTEM
+# 
+# Top level modules:
+# 	TB_SYSTEM
+# End time: 18:11:04 on Nov 15,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  TB_SYSTEM
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" TB_SYSTEM 
+# Start time: 18:11:05 on Nov 15,2022
+# Loading work.TB_SYSTEM
+# Loading work.BB_SYSTEM
+# Loading work.SC_DEBOUNCE1
+# Loading work.SC_RegPOINTTYPE
+# Loading work.SC_STATEMACHINEPOINT
+# Loading work.SC_positionYCOUNTER
+# Loading work.SC_STATEMACHINEGAME
+# Loading work.CC_WINCOMPARATOR
+# Loading work.SC_LEVELCOUNTER
+# Loading work.SC_TIMECOUNTER
+# Loading work.CC_TIMECOMPARATOR
+# Loading work.CC_SCREENCOMPARATOR
+# Loading work.SC_RegBACKGTYPE
+# Loading work.CC_COLLITIONCOMPARATOR
+# Loading work.SC_upSPEEDCOUNTER
+# Loading work.CC_SPEEDCOMPARATOR
+# Loading work.CC_BOTTOMSIDECOMPARATOR
+# Loading work.matrix_ctrl
+# Loading work.shift_reg_start_done
+# Loading work.CC_BIN2BCD1
+# Loading work.CC_SEVENSEG1
+# Loading work.SC_upCOUNTER
+# ** Warning: (vsim-3015) C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/simulation/modelsim/TB_SYSTEM.vt(60): [PCDPC] - Port size (12) does not match connection size (1) for port 'BB_SYSTEM_display_OutBUS'. The port definition is at: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0 File: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v
+# ** Warning: (vsim-3015) C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v(329): [PCDPC] - Port size (3) does not match connection size (2) for port 'SC_STATEMACHINEPOINT_shiftselection_Out'. The port definition is at: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v(27).
+#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0/SC_STATEMACHINEPOINT_u0 File: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEPOINT.v
+# ** Warning: (vsim-3015) C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v(362): [PCDPC] - Port size (1) does not match connection size (2) for port 'SC_STATEMACHINEGAME_levelcounter_OutLow'. The port definition is at: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v(27).
+#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0/SC_STATEMACHINEGAME_u0 File: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_STATEMACHINEGAME.v
+# ** Warning: (vsim-3015) C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v(389): [PCDPC] - Port size (1) does not match connection size (2) for port 'SC_levelcounter_count_InLow'. The port definition is at: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0/SC_LEVELCOUNTER_u0 File: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_LEVELCOUNTER.v
+# ** Warning: (vsim-3015) C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/BB_SYSTEM.v(440): [PCDPC] - Port size (2) does not match connection size (1) for port 'SC_RegBACKGTYPE_shiftselection_In'. The port definition is at: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /TB_SYSTEM/BB_SYSTEM_u0/SC_RegBACKGTYPE_u7 File: C:/Users/Usuario/Downloads/PRJ0_EJEMPLO_FULLCONECTED/PRJ0_EJEMPLO_1/rtl/SC_RegBACKGTYPE.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Running testbench
+# Break key hit
+# Simulation stop requested.
+# End time: 18:11:17 on Nov 15,2022, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 5
